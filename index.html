@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="container p-4">
+        <div class="row">
+          <div
+            class="imges col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="img-box">
+              <img class="w-100" id="img" />
+              <canvas id="canvas"></canvas>
+            </div>
+            <div class="upload">
+              <label for="Upload">Up load</label>
+              <input type="file" id="Upload" />
+            </div>
+          </div>
+          <div class="fliter col-lg-6 col-sm-12">
+            <ul>
+              <li>
+                <label for="saturate">Saturate</label>
+                <input
+                  type="range"
+                  id="saturate"
+                  min="0"
+                  max="200"
+                  value="100"
+                />
+              </li>
+              <li>
+                <label for="contrast">Contrast</label>
+                <input
+                  type="range"
+                  id="contrast"
+                  min="0"
+                  max="200"
+                  value="100"
+                />
+              </li>
+              <li>
+                <label for="brightness">Brightness</label>
+                <input
+                  type="range"
+                  id="brightness"
+                  min="0"
+                  max="200"
+                  value="100"
+                />
+              </li>
+              <li>
+                <label for="sepia">Sepia</label>
+                <input type="range" id="sepia" min="0" max="200" value="0" />
+              </li>
+              <li>
+                <label for="grayscale">Grayscale</label>
+                <input
+                  type="range"
+                  id="grayscale"
+                  min="0"
+                  max="1"
+                  value="0"
+                  step="0.1"
+                />
+              </li>
+              <li>
+                <label for="blur">Blur</label>
+                <input
+                  type="range"
+                  id="blur"
+                  min="0"
+                  max="10"
+                  value="0"
+                  step="0.1"
+                />
+              </li>
+              <li>
+                <label for="huerotate">Hue-rotate</label>
+                <input
+                  type="range"
+                  id="huerotate"
+                  min="0"
+                  max="10"
+                  value="0"
+                  step="0.1"
+                />
+              </li>
+              <li>
+                <a onclick="ik()" download="image" id="download">Download</a>
+                <span onclick="resetValue()">Reset</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
